@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Veroight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+</head>
+<body>
+
+
+  <div ng-controller="ToolbarCtrl">
+    <md-content>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <a href="#/">
+            <h2>
+              <span>Angular</span>
+            </h2>
+          </a>
+
+          <span flex></span>
+          <md-button href="#/register" class="md-raised" ng-show="!authData">
+            Sign Up
+          </md-button>
+          <md-button href="#/login" class="md-raised" ng-show="!authData">
+            Log in
+          </md-button>
+          <md-button ng-click="auth.$unauth()" class="md-raised" ng-show="authData">
+            Logout
+          </md-button>
+        </div>
+      </md-toolbar>
+    </md-content>
+  </div>
+  <br>
+
+
+  <div ng-view></div>
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+  <script src="app.js"></script>
+  <script src="utils/constants.js" charset="utf-8"></script>
+  <script src="utils/services.js" charset="utf-8"></script>
+  <script src="login/login.js"></script>
+  <script src="register/register.js"></script>
+  <script src="home/home.js" charset="utf-8"></script>
+  <script src="toolbar/toolbar.js" charset="utf-8"></script>
+  <script src="events/events.js">
+
+  </script>
+</body>
+</html>

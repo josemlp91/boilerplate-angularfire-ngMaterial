@@ -1,0 +1,38 @@
+
+<div>
+
+  <div layout="row" layout-align="center center">
+
+    <div layout="column" class="loginBox md-whiteframe-z1" >
+      <form name="loginform" ng-submit="loginform.$valid && login()">
+        <md-toolbar>
+          <div layout="row">
+            <div>
+              <h2 class="md-toolbar-tools"><span>Login</span></h2>
+            </div>
+            <div flex-offset="25">
+                <h5 ng-if="error && !toastDisplayed">{{showSimpleToast()}}</h5>
+            </div>
+          </div>
+
+        </md-toolbar>
+        <md-content layout="column" class="md-padding">
+          <md-input-container>
+            <label>Email</label>
+            <input type="email" ng-model="login.email" required/>
+
+          </md-input-container>
+          <md-input-container>
+            <label>Password</label>
+            <input type="password" ng-model="login.password" required/>
+          </md-input-container>
+          <div layout="row" layout-align="center center" style="padding-top:20px;">
+            <md-button class="md-raised md-primary" type="submit">Login</md-button>
+            <div flex="flex"></div>
+            <md-button href="" md-no-ink="md-no-ink">Forgot password?</md-button>
+          </div>
+        </md-content>
+      </form>
+    </div>
+  </div>
+</div>

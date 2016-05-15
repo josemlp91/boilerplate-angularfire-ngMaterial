@@ -1,0 +1,22 @@
+.loginBox {
+  max-width: 90%;
+  width: 500px
+}
+
+.stretch input {
+  width: 100%
+}
+
+.center {
+  position: absolute;
+    margin-top: 40%;
+}
+
+#logo {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 20%;
+   /*opacity: 0.8;
+   filter: alpha(opacity=80);*/
+ }
